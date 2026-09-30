@@ -3,8 +3,18 @@
 //  remember and access variables from its outer function even after the outer function has
 //  finished executing.
 
-let me = "Cliff Levai"
-function greetMe(){
-    console.log("Hello " + me + '!')
+// let me = "Cliff Levai"
+// function greetMe(){
+//     console.log("Hello " + me + '!')
+// }
+// greetMe() // Hello Cliff Levai
+
+function sendRequest (){
+    let requestID = '123'
+    $.ajax({
+        url: '/myurl',
+        success: function(response){
+            console.log('Request ID: ' + requestID + ' returned')
+        }
+    })
 }
-greetMe() // Hello Cliff Levai
